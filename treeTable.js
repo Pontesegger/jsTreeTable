@@ -223,6 +223,11 @@ var com_github_culmat_jsTreeTable =  (function(){
 				this.trChildrenVisible ? this.trCollapse(true) : this.trExpand(true)
 			})
 		})
+
+		$("tr[data-tt-collapsed]", table).each(function(index, tr) {
+			$(tr).trigger('click');
+		});
+
 		return table
 	}
 	
